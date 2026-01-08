@@ -1,6 +1,6 @@
 theme = "papersite-template"
 languageCode = "en-us"
-baseurl = "http://ghostwriteattack.com/"
+baseurl = "http://stackwarpattack.com/"
 title = "StackWarp"
 
 author = "Ruiyi Zhang"
