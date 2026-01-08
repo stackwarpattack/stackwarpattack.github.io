@@ -1,0 +1,28 @@
+theme = "papersite-template"
+languageCode = "en-us"
+baseurl = "http://ghostwriteattack.com/"
+title = "GhostWrite"
+
+author = "Fabian Thomas"
+copyright = "Copyright © 2024, CISPA Helmholtz Center for Information Security, all rights reserved."
+
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+[params]
+    name = "GhostWrite"
+    description = "This is the site for an example attack."
+
+    institute_street = "Musterstraße 42"
+    institute_city = "12345 Berlin"
+    institute_country = "Germany"
+
+    favicon = "favicon.ico"
+
+[markup]
+  # syntax highlight settings
+  # available themes: https://xyproto.github.io/splash/docs/
+  [markup.highlight]
+    style = "onedark"
+  # unsafe to ensure all shortcodes function correctly
+  [markup.goldmark.renderer]
+    unsafe= true

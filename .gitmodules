@@ -1,0 +1,3 @@
+[submodule "themes/papersite-template"]
+	path = themes/papersite-template
+	url = https://github.com/stackwarpattack/stackwarp-website-theme

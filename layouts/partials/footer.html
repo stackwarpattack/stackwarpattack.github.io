@@ -1,0 +1,32 @@
+<footer>
+  <div class="contentcontainer">
+    <div id="footercontainer">
+      <div class="footerlogos" style="padding-right:0.5rem;">
+        <div>
+          <img src="/cispa.svg" />
+          <img src="/helmholtz-brand-white.svg" />
+        </div>
+      </div>
+      <div id="footeraddress" style="padding: 0 0.5rem;">
+        <div>
+          <span>CISPA Helmholtz Center for Information Security</span>
+          <span>Stuhlsatzenhaus 5</span>
+          <span>66123 Saarbrücken</span>
+        </div>
+      </div>
+      <div id="footerlinks" style="padding-left: 0.5rem;">
+        <div>
+          <a href="https://cispa.de/en/impressum">Imprint</a>
+          <a href="https://cispa.de/en/data-privacy-policy"
+            >Data Privacy Policy</a
+          >
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; color: gray;">
+      Want to contribute to such research? <a href="https://cispa.de/en/career/phd-at-cispa">CISPA is constantly looking for PhD students</a><br><br>
+      Last Update: {{ time.Now | time.Format "2006-01-02" }}, <a href="https://github.com/ghostwriteattack/ghostwriteattack.github.io">Changelog and website repository</a>, Designed by <a href="https://leon.trampert.me">Leon Trampert</a><br><br>
+      {{ .Site.Copyright }}
+    </p>
+  </div>
+</footer>
