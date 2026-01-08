@@ -5,5 +5,6 @@ slug: "acknowledgements"
 small: true
 ---
 
-This work was supported in part by Semiconductor Research Corporation (SRC) Hardware Security Program (HWS) and by a Google Research Scholar award.
+We want to thank our shepherd and the anonymous reviewers for their guidance, comments and valuable suggestions, as well as Lukas Gerlach and Youheng Lü for helpful feedback on this work.
+This work was partly supported by the Semiconductor Research Corporation (SRC) Hardware Security Program (HWS).
 Any opinions, findings, conclusions, or recommendations expressed in this work are those of the authors and do not necessarily reflect the views of the funding parties.
