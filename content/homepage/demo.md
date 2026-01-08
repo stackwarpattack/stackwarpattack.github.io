@@ -6,11 +6,9 @@ header_menu: true
 slug: "demo"
 ---
 
-We show what GhostWrite can do with two proof-of-concept exploits.
+We show what StackWarp can do with two proof-of-concept exploits.
 
-In the first exploit, we use GhostWrite to modify the kernel's `getuid` syscall. 
-This function checks a user's ID to decide what `sudo` should do. 
-If `getuid` returns `0`, which is the special ID for the privileged root user, `sudo` gives root access without asking for a password.
+In the first exploit, we targeted the password check in OpenSSH to log into a guest account without a password. When a user provides a password, `sys_auth_passwd` calls `shadow_pw` to retrieve the stored hash. By using StackWarp, we shift the stack pointer by 32 bytes just before `shadow_pw` returns. This causes the function to skip its normal return path and instead return directly to the caller of `sys_auth_passwd`. Because `shadow_pw` returns a non-zero value, the caller interprets this as a successful password match and grants access.
 
 <div>
     <video width="100%" controls>
@@ -20,18 +18,7 @@ If `getuid` returns `0`, which is the special ID for the privileged root user, `
 </div>
 
 
-On its own, GhostWrite can only *write* to memory. 
-However, it can be used to create a read function by modifying the page tables in memory. 
-These tables translate *virtual* memory addresses to *physical* ones. 
-Consequently, modifying them allows an attacker to get an accessible *virtual* address for any *physical* address, allowing reading *and* writing.
-
-The second exploit shows how this GhostWrite-based read function can leak any memory content from a machine. 
-To demonstrate this, we assume an administrator types a secret password into a trusted password prompt to update the system (left).
-
-The exploit (right) starts by filling the *physical* memory with page tables. 
-Given that the victim system has 8GB of memory, this process takes a few seconds. 
-The exploit then attempts to modify one of these page tables using GhostWrite. 
-Once successful, the exploit can read the secret password directly from physical memory.
+The second exploit shows how StackWarp manipulate the data flow of the `getuid` system call, allowing an unprivileged user to obtain a root shell in SEV-SNP confidential VMs. When a user runs `sudo`, it calls `getuid` to check if the current UID is 0 (root). We perform a **two-shot stack pointer manipulation** within the Linux kernel's system call handler. Just before the kernel restores the user's registers, we inject an offset of *-8* bytes so the `pop rax` instruction—which should load the user's real UID—instead restores a previous unused register value. This fills `rax` with 0, causing `sudo` to immediately grant root access.
 
 <div>
     <video width="100%" controls>
