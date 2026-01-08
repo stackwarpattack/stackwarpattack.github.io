@@ -1,15 +1,15 @@
 theme = "papersite-template"
 languageCode = "en-us"
 baseurl = "http://ghostwriteattack.com/"
-title = "GhostWrite"
+title = "StackWarp"
 
-author = "Fabian Thomas"
+author = "Ruiyi Zhang"
 copyright = "Copyright © 2024, CISPA Helmholtz Center for Information Security, all rights reserved."
 
 disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 
 [params]
-    name = "GhostWrite"
+    name = "StackWarp"
     description = "This is the site for an example attack."
 
     institute_street = "Musterstraße 42"
