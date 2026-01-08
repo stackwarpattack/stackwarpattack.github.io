@@ -9,19 +9,15 @@ slug: "how-we-found-it"
 {{< icon src="/differential-fuzzing.svg" alt="An overview of differential CPU fuzzing." >}}
 <--->
 
-{{< title title="RISCover." subtitle="Differential CPU Fuzz Testing.">}}
+{{< title title="One Core, Two Threads:" subtitle="The Discovery of StackWarp.">}}
 
 
-We discovered **GhostWrite** by analyzing both documented and undocumented instructions using a method called *differential fuzz-testing* for CPUs.
-The concept is intuitive: generate small programs, run them on different CPUs, and compare the results.
-Since every RISC-V CPU should follow the [RISC-V specification](https://riscv.org/technical/specifications/), they should produce the same results for the same inputs.
-When results differ between CPUs, it suggests that one of the CPUs might have an issue.
+Our discovery of **StackWarp** began with a systematic exploration of undocumented MSRs on AMD Zen CPUs. We specifically investigated the behavior of core-scoped MSRs, which are shared between the two logical threads of a single physical core.
 
-For this, we developed a dedicated fuzzer called [**RISCover**](https://github.com/cispa/RISCover).
-Using RISCover, we identified GhostWrite when the **T-Head XuanTie C910** CPU showed unusual behavior with an *illegally-encoded vector-store* instruction.
-While other CPUs generated page fault exceptions or refused to execute the instruction, the C910 executed it.
+Our experimental setup involved a synchronized sibling attack: we ran a host agent on one logical core while pinning a victim process, an SEV-SNP guest, to the sibling logical core. The host agent rapidly toggled undocumented MSR bits to see if the state change on one thread would silently affect the execution state on the other.
 
-Upon deeper investigation, we discovered that this illegally-encoded instruction allows a process to write directly to *physical* memory instead of *virtual* memory, exposing a severe security vulnerability.
-Our findings on GhostWrite and RISCover have been accepted for publication in the proceedings of **ACM CCS 2025**.
+We discovered that flipping a specific bit in MSR 0xC0011029 (bit 19) consistently caused the victim process on the sibling thread to experience architectural deviations. Specifically, we observed segmentation faults and corrupted return addresses in the guest VM, indicating that the stack pointer was being modified without any direct instruction from the guest itself. By correlating these crashes with stack-intensive code, we pinpointed the issue to a synchronization failure in the CPU's stack engine.
+
+Our findings on StackWarp have been accepted for publication in the proceedings of **USENIX Security 2026**.
 
 {{< /smallcolumn >}}
