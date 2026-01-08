@@ -8,10 +8,8 @@ header_menu: true
 date: 07-10-2023
 ---
 
-TODO
-The GhostWrite vulnerability affects the T-Head XuanTie C910 and C920 RISC-V CPUs. 
-This vulnerability allows unprivileged attackers, even those with limited access, to read and write any part of the computer's memory and to control peripheral devices like network cards. 
-GhostWrite renders the CPU's security features ineffective and cannot be fixed without disabling around half of the CPU's functionality.
+StackWarp is a security vulnerability that exploits an underlying synchronization bug present in all AMD Zen 1–5 processors. With the context of SEV-SNP, this flaw allows the host to inject deterministic offsets into the guest stack pointer. This enables the hijacking of both control and data flow, allowing an attacker to achieve remote code execution and privilege escalation inside a confidential VM.
+
 
 {{< linkbutton title="READ" icon="fas fa-book fa-1x" url="/TODO.pdf" aria_label="Read the paper" >}}
 
