@@ -75,8 +75,8 @@ Yes, many other RISC-V CPUs are not affected by GhostWrite.
 The vulnerability is specific to the T-Head XuanTie C910 and C920 CPUs.
 {{< /accordion >}}
 
-{{< accordion title="What is CVE-TODO?" >}}
-CVE-TODO is the official reference to StackWarp. CVE is the standard for information security vulnerability names maintained by MITRE.
+{{< accordion title="What is CVE-CVE-2025-29943?" >}}
+CVE-2025-29943 is the official reference to StackWarp. CVE is the standard for information security vulnerability names maintained by MITRE.
 {{< /accordion >}}
 
 {{< accordion title="Can I use the logo?" last=true >}}

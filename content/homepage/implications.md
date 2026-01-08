@@ -9,7 +9,7 @@ slug: "implications"
 To the best of our knowledge, only the T-Head XuanTie C910 CPU in the TH1520 SoC and the T-Head XuanTie C920 CPU in the SOPHON SG2042 are affected by GhostWrite. 
 Still, this vulnerability impacts a wide range of devices, including personal computers, laptops, containers, and virtual machines in cloud servers. 
 Therefore, any customers or vendors using machines with these processors are at risk.
-The vulnerability is tracked as CVE-2024-44067.
+The vulnerability is tracked as CVE-2025-29943.
 
 Vulnerable devices include:
 - [Scaleway Elastic Metal RV1](https://labs.scaleway.com/en/em-rv1/), bare-metal C910 cloud instances

@@ -30,6 +30,6 @@ GhostWrite renders the CPU's security features ineffective and cannot be fixed w
         {{< linkbutton title="TRY" icon="fas fa-flask fa-1x" url="https://github.com/cispa/TODO" classes="buttonoutline buttonsmall" aria_label="Try the exploit PoC" >}}
     </div>
     <div>
-        {{< linkbutton title="CVE" icon="fas fa-bug" url="https://nvd.nist.gov/vuln/detail/TODO" classes="buttonoutline buttonsmall" aria_label="TODO" >}}
+        {{< linkbutton title="CVE" icon="fas fa-bug" url="https://nvd.nist.gov/vuln/detail/CVE-2025-29943" classes="buttonoutline buttonsmall" aria_label="CVE-2025-29943" >}}
     </div>
 </div>
