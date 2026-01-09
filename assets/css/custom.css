@@ -126,7 +126,7 @@ button {
 
 /* CTA columns prevent icon/text wrapping */
 .home-cta > div {
-  flex: 1 1 clamp(8rem, 45vw, 11rem); /* keep items wide enough for icon + text, */
+  flex: 1 1 clamp(6rem, 20vw, 11rem); /* keep items wide enough for icon + text, */
                                       /* but allow smaller bases on narrow screens */
 }
 
