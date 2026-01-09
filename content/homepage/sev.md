@@ -9,7 +9,7 @@ slug: "sev"
 {{< icon src="/amd-sev.svg" alt="RISC-V logo" >}}
 <--->
 
-{{< title title="SEV-SNP." subtitle="Confidential Virtual Machine.">}}
+{{< title title="SEV-SNP." subtitle="Confidential Virtual Machines.">}}
 
 **AMD Secure Encrypted Virtualization (SEV)** is a CPU extension enabling a more secure separation between virtual machines (VMs) and the underlying hypervisor. AMD SEV allows developers to deploy VMs in an untrusted hypervisor environment securely. In other words, this means that computations in the cloud can be performed on confidential data even if the cloud provider is untrusted or compromised.
 
