@@ -2,7 +2,7 @@
 author: StackWarp Team
 title: "StackWarp"
 logo: "/stackwarp.svg"
-logo_header: "/stackwarp-no-text.svg"
+logo_header: "/stackwarp-no-text-light.svg"
 header_title: "Home"
 header_menu: true
 date: 2026-01-09
