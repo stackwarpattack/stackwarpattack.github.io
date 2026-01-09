@@ -1,7 +1,8 @@
 ---
 author: StackWarp Team
 title: "StackWarp"
-logo_header: "/stackwarp-no-text-light.svg"
+logo_header_mark: "/stackwarp-no-text-light.svg"
+logo_header_text: "/stackwarp-text-light.svg"
 logo_mark: "/stackwarp-no-text.svg"
 logo_text: "/stackwarp-text.svg"
 header_title: "Home"
