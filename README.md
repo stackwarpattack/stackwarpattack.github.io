@@ -10,5 +10,5 @@ nix run
 ## Generating the favicon
 
 ``` sh
-nix-shell -p imagemagick --run 'magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none static/stackwarp-no-text.svg static/favicon.ico'
+nix-shell -p imagemagick --run 'magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none static/favicon_dark.svg static/favicon_dark.ico && magick -density 300 -define icon:auto-resize=256,128,96,64,48,32,16 -background none static/favicon_light.svg static/favicon_light.ico'
 ```
