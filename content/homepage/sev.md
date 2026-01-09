@@ -6,7 +6,7 @@ slug: "sev"
 ---
 
 {{< smallcolumn >}}
-{{< icon src="/amd-sev.svg" alt="RISC-V logo" >}}
+{{< icon src="/amd-sev.svg" alt="AMD-SEV logo" >}}
 <--->
 
 {{< title title="SEV-SNP." subtitle="Confidential Virtual Machines.">}}
