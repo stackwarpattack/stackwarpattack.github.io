@@ -6,7 +6,7 @@ slug: "how-we-found-it"
 ---
 
 {{< smallcolumn reverse=false >}}
-{{< icon src="/differential-fuzzing.svg" alt="An overview of differential CPU fuzzing." >}}
+{{< icon src="/approach.svg" alt="MSR Toggling across SMT." >}}
 <--->
 
 {{< title title="One Core, Two Threads:" subtitle="The Discovery of StackWarp.">}}
