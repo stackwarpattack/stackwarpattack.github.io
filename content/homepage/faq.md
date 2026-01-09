@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-weight: 80
+weight: 75
 header_title: "FAQ"
 header_menu: true
 slug: "faq"
