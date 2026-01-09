@@ -6,7 +6,7 @@ slug: "details"
 ---
 
 {{< smallcolumn reverse=true >}}
-{{< icon src="/ghostwrite-ram.svg" alt="GhostWrite Illustration" >}}
+{{< icon src="/stackwarp.svg" alt="StackWarp Logo" >}}
 <--->
 
 {{< title title="StackWarp." subtitle="Deterministic Control over Stack Pointer.">}}
