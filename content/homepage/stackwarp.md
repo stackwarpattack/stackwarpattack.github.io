@@ -9,19 +9,19 @@ slug: "details"
 {{< icon src="/stackwarp.svg" alt="StackWarp Logo" >}}
 <--->
 
-{{< title title="StackWarp." subtitle="Deterministic Control over Stack Pointer.">}}
+{{< title title="StackWarp." subtitle="Deterministically Controlling the Stack Pointer.">}}
 
-StackWarp is a software-based architectural attack targeting AMD SEV-SNP Confidential Virtual Machines.
-It exploits a synchronization failure in the stack engine, the hardware component responsible for managing stack pointer updates early in the pipeline.
-The vulnerability exists because an undocumented, core-scoped model-specific register (MSR) bit that enables or disables the stack engine is not correctly synchronized between logical sibling cores.
-While the underlying bug is present across Zen 1–5 microarchitectures, it only becomes a security issue for SEV because it requires a privileged attacker to write to MSRs.
+StackWarp is a software-based architectural attack targeting AMD SEV-SNP confidential virtual machines (CVMs).
+It exploits a synchronization failure in the stack engine that manages stack pointer updates in the CPU frontend.
+The vulnerability exists because bit 19 of the undocumented core-scoped model-specific register (MSR) 0xC0011029 can enable or disable the stack engine and is not properly synchronized between logical sibling cores.
+While the underlying bug is present across Zen 1–5 microarchitectures, it only becomes a security issue in the context of AMD SEV as MSR writes require a privileged attacker.
 
-By toggling this bit from a sibling hyperthread, an attacker induces a "freeze-release" effect. While the engine is disabled, stack instructions like `push` or `pop` commit their memory updates, but the architectural update to the stack pointer is withheld and "frozen". Re-enabling the engine later releases this accumulated delta in one step, allowing a malicious hypervisor to inject a deterministic, attacker-chosen offset into a guest’s stack pointer without reading encrypted memory.
+By toggling bit 19 of MSR 0xC0011029 from a sibling hyperthread, an attacker induces a "freeze-release" effect. While the engine is disabled, stack instructions like `push` or `pop` commit their memory updates, but the architectural update to the stack pointer is withheld and "frozen". Re-enabling the engine later, by toggling the bit again, releases this accumulated delta in one step. Thus, allowing a malicious hypervisor to inject a deterministic attacker-chosen offset into a guest’s stack pointer without reading encrypted memory.
 
 This allows an attacker to redirect control flow or manipulate data flow.
-Through these primitives, an attacker can recover RSA private keys from single faulty signatures, bypass OpenSSH password authentication, or escalate privileges by either bypassing sudo authentication or a kernel-mode ROP chain.
+We demonstrate that through these primitives, an attacker can recover RSA private keys from a single faulty signature, bypass OpenSSH password authentication, or escalate privileges by either bypassing sudo authentication or using a kernel ROP chain.
 
-AMD has already released hot-loadable microcode patches, though disabling SMT remains an effective immediate stopgap.
+To mitigate the issue, AMD has released hot-loadable microcode patches. Also, disabling SMT is an effective immediate stopgap.
 
 <!-- GhostWrite is a bug in the T-Head XuanTie C910 and C920, two of the fastest RISC-V CPUs available. 
 Unlike side-channel attacks or [transient-execution attacks](https://transient.fail/), GhostWrite is a direct CPU bug. 

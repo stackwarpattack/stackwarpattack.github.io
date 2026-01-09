@@ -6,11 +6,11 @@ header_menu: true
 slug: "demo"
 ---
 
-We show what StackWarp can do with two proof-of-concept exploits:
+We demonstrate the StackWarp's security impact with two proof-of-concept exploits:
 
-In the first exploit, we targeted the password check in **OpenSSH** to log into a guest account without a password. When a user provides a password, `sys_auth_passwd()` calls `shadow_pw()` to retrieve the stored hash. 
+For the first exploit, we target the password check in **OpenSSH** to log into a guest account without a password. When a user provides a password, `sys_auth_passwd()` calls `shadow_pw()` to retrieve the stored hash. 
 
-By using StackWarp, we shift the stack pointer by 32 bytes just before `shadow_pw()` returns. This causes the function to skip its normal return path and instead return directly to the caller of `sys_auth_passwd()`. Because `shadow_pw()` returns a non-zero value, the caller interprets this as a successful password match and grants access.
+Using StackWarp, we shift the stack pointer by 32 bytes just before `shadow_pw()` returns. This causes the function to skip its normal return path and instead return directly to the caller of `sys_auth_passwd()`. Because `shadow_pw()` returns a non-zero value, the caller interprets this as a successful password match and grants access.
 
 <div>
     <video width="100%" controls>

@@ -3,8 +3,8 @@ languageCode = "en-us"
 baseurl = "http://stackwarpattack.com/"
 title = "StackWarp"
 
-author = "Ruiyi Zhang"
-copyright = "Copyright © 2024, CISPA Helmholtz Center for Information Security, all rights reserved."
+author = "StackWarp Team"
+copyright = "Copyright © 2026, CISPA Helmholtz Center for Information Security, all rights reserved."
 
 disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 
@@ -12,8 +12,8 @@ disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
     name = "StackWarp"
     description = "This is the site for an example attack."
 
-    institute_street = "Musterstraße 42"
-    institute_city = "12345 Berlin"
+    institute_street = "Stuhlsatzenhaus 5"
+    institute_city = "66123 Saarbruecken"
     institute_country = "Germany"
 
     favicon = "favicon.ico"

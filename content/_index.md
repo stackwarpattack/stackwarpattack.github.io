@@ -1,14 +1,14 @@
 ---
-author: Leon Trampert
+author: StackWarp Team
 title: "StackWarp"
 logo: "/stackwarp.svg"
 logo_header: "/stackwarp-no-text.svg"
 header_title: "Home"
 header_menu: true
-date: 07-10-2023
+date: 2026-01-09
 ---
 
-StackWarp is a security vulnerability that exploits an underlying synchronization bug present in all AMD Zen 1–5 processors. With the context of SEV-SNP, this flaw allows the host to inject deterministic offsets into the guest stack pointer. This enables the hijacking of both control and data flow, allowing an attacker to achieve remote code execution and privilege escalation inside a confidential VM.
+StackWarp is a security vulnerability that exploits a synchronization bug present in all AMD Zen 1–5 processors. In the context of SEV-SNP, this flaw allows malicious VM hosts to manipulate the guest VM's stack pointer. This enables hijacking of both control and data flow, allowing an attacker to achieve remote code execution and privilege escalation inside a confidential VM.
 
 
 {{< linkbutton title="READ" icon="fas fa-book fa-1x" url="/TODO.pdf" aria_label="Read the paper" >}}
@@ -16,7 +16,7 @@ StackWarp is a security vulnerability that exploits an underlying synchronizatio
 <div class="columns home-cta" style="margin-top: 1rem">
     <div>
 {{< modalbutton title="CITE" icon="fa-solid fa-quote-left" id="citebutton" classes="buttonoutline buttonsmall" aria_label="Cite the paper" >}}
-@inproceedings{Zhang2025StackWarp,
+@inproceedings{Zhang2026StackWarp,
  author = {Ruiyi Zhang and Tristan Hornetz and Daniel Weber and Fabian Thomas and Michael Schwarz},
  booktitle = {USENIX Security},
  title = {{StackWarp: Breaking AMD SEV-SNP Integrity via Deterministic Stack-Pointer Manipulation through the CPU’s Stack Engine}},
