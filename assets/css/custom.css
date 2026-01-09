@@ -65,35 +65,36 @@
   --text: #1c1c1c;
   --background: #f5f5f5;
   --primary: #142a5e;
-  --secondary: #a3d71d;
-  --accent: #badd16;
+  --secondary: #b8cc10;
+  --accent: #b9ce00;
   --success: #00c458;
   --error: #eb1c50;
   --danger: #ff653f;
 
-  --link: #a3d71d;
-  --link-visited: #142a5e;
+  --link: #102a63;
+  --link-visited: #102a63;
+  --link-dark: #b8cc10;
 
   --nav-text: #f5f5f5;
-  --nav-active: #a3d71d;
+  --nav-active: #b8cc10;
   --nav-background: #292929;
 
-  --accordion: #a3d71d;
-  --accordion-dark: #a3d71d;
+  --accordion: #b8cc10;
+  --accordion-dark: #b8cc10;
   --accordion-content-dark: #2b2b2b;
   --accordion-content: #ffffff;
-  --accordion-active: #badd16;
+  --accordion-active: #b9ce00;
   --accordion-divider: #1c1c1c;
-  --accordion-divider-dark: #142a5e;
+  --accordion-divider-dark: #2b2b2b;
   --subtitle: #2b2b2b;
   --subtitle-dark: #a0a0a0;
-  --button-border: #a3d71d;
-  --button-background: #a3d71d;
-  --button-background-hover: #badd1690;
+  --button-border: #b8cc10;
+  --button-background: #b8cc10;
+  --button-background-hover: #b9ce0090;
   --button-active: #142a5e;
-  --button-outline-background-hover: #badd1652;
-  --dialog-border: #a3d71d;
-  --dialog-text-border: #a3d71d;
+  --button-outline-background-hover: #b9ce0052;
+  --dialog-border: #b8cc10;
+  --dialog-text-border: #b8cc10;
 }
 
 #headline {
@@ -113,6 +114,11 @@
 body,
 button {
   font-family: "Montserrat", sans-serif;
+}
+
+.contentdark a,
+.contentdark a:visited {
+  color: var(--link-dark);
 }
 
 /* Ensure icon + text in buttons do not wrap under the icon */
