@@ -48,7 +48,14 @@ CVE-2025-29943 is the official reference to StackWarp. CVE is the standard for n
 {{< accordion title="Can I use the logo?" last=true >}}
 The logo is free to use, rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Logo designed by [Chiara Schwarz](https://cispa.de/de/people/c02chsc).
 
-[Logo with text](/stackwarp.svg)
-
-[Logo without text](/stackwarp-no-text.svg)
+| Logo | Preview | File |
+| --- | --- | --- |
+| Text dark | <img class="logo-table-img" src="/stackwarp-text-dark.svg" alt="StackWarp text logo dark"> | [stackwarp-text-dark.svg](/stackwarp-text-dark.svg) |
+| Text light | <img class="logo-table-img" src="/stackwarp-text-light.svg" alt="StackWarp text logo light"> | [stackwarp-text-light.svg](/stackwarp-text-light.svg) |
+| No text dark | <img class="logo-table-img" src="/stackwarp-no-text-dark.svg" alt="StackWarp logo mark dark"> | [stackwarp-no-text-dark.svg](/stackwarp-no-text-dark.svg) |
+| No text light | <img class="logo-table-img" src="/stackwarp-no-text-light.svg" alt="StackWarp logo mark light"> | [stackwarp-no-text-light.svg](/stackwarp-no-text-light.svg) |
+| Horizontal dark | <img class="logo-table-img" src="/stackwarp-horizontal-dark.svg" alt="StackWarp horizontal logo dark"> | [stackwarp-horizontal-dark.svg](/stackwarp-horizontal-dark.svg) |
+| Horizontal light | <img class="logo-table-img" src="/stackwarp-horizontal-light.svg" alt="StackWarp horizontal logo light"> | [stackwarp-horizontal-light.svg](/stackwarp-horizontal-light.svg) |
+| Vertical dark | <img class="logo-table-img" src="/stackwarp-vertical-dark.svg" alt="StackWarp vertical logo dark"> | [stackwarp-vertical-dark.svg](/stackwarp-vertical-dark.svg) |
+| Vertical light | <img class="logo-table-img" src="/stackwarp-vertical-light.svg" alt="StackWarp vertical logo light"> | [stackwarp-vertical-light.svg](/stackwarp-vertical-light.svg) |
 {{< /accordion >}}
