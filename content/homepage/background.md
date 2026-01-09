@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 40
 header_title: "Description"
 header_menu: false
 slug: "fundamentals"

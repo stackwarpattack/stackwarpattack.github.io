@@ -1,7 +1,7 @@
 ---
 header_title: "How we found it"
 header_menu: true
-weight: 50
+weight: 60
 slug: "how-we-found-it"
 ---
 

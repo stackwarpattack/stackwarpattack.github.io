@@ -1,7 +1,7 @@
 ---
 header_menu: true
 header_title: "Details"
-weight: 3
+weight: 50
 slug: "details"
 ---
 
