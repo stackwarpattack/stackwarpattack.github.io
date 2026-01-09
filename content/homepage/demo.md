@@ -6,7 +6,7 @@ header_menu: true
 slug: "demo"
 ---
 
-We demonstrate the StackWarp's security impact with two proof-of-concept exploits:
+We demonstrate StackWarp's security impact with two proof-of-concept exploits:
 
 For the first exploit, we target the password check in **OpenSSH** to log into the machine without providing a password. When a user provides a password, `sys_auth_passwd()` calls `shadow_pw()` to retrieve the stored hash. 
 
