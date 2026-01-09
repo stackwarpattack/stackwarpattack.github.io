@@ -1,5 +1,5 @@
 ---
-weight: 20
+weight: 45
 header_title: "SEV-SNP"
 header_menu: false
 slug: "sev"
