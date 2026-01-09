@@ -1,8 +1,9 @@
 ---
 author: StackWarp Team
 title: "StackWarp"
-logo: "/stackwarp.svg"
 logo_header: "/stackwarp-no-text-light.svg"
+logo_mark: "/stackwarp-no-text.svg"
+logo_text: "/stackwarp-text.svg"
 header_title: "Home"
 header_menu: true
 date: 2026-01-09
