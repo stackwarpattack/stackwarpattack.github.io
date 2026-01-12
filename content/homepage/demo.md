@@ -14,7 +14,7 @@ Using StackWarp, we shift the stack pointer by *32* bytes just before `shadow_pw
 
 <div>
     <video width="100%" controls>
-        <source src="/kernel-getuid-sudo-attack.mp4" type="video/mp4">
+        <source src="/StackWarp-OpenSSH-Demo.mp4" type="video/mp4">
         TODO
     </video>
 </div>
@@ -28,7 +28,7 @@ Just before the kernel restores the userspace registers, we inject an offset of 
 
 <div>
     <video width="100%" controls>
-        <source src="/page-table-physical-read-attack.mp4" type="video/mp4">
+        <source src="/StackWarp-Sudo-Demo.mp4" type="video/mp4">
         TODO
     </video>
 </div>
