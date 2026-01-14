@@ -176,7 +176,7 @@ table td:nth-child(2) > .logo-table-img {
   width: 60%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   #people {
     width: 80%;
   }
@@ -230,7 +230,7 @@ table td:nth-child(2) > .logo-table-img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   #home > .contentcontainer {
     flex-direction: column;
     align-items: center;
