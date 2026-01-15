@@ -7,6 +7,7 @@ hugo serve
 nix run
 ```
 
+
 ## Generating the favicon
 
 ``` sh
