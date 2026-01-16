@@ -30,6 +30,6 @@ StackWarp is a security vulnerability that exploits a synchronization bug presen
         {{< linkbutton title="TRY" icon="fas fa-flask fa-1x" url="https://github.com/cispa/StackWarp" classes="buttonoutline buttonsmall" aria_label="Try the exploit PoC" >}}
     </div>
     <div>
-        {{< linkbutton title="CVE" icon="fas fa-bug" url="https://nvd.nist.gov/vuln/detail/CVE-2025-29943" classes="buttonoutline buttonsmall" aria_label="CVE-2025-29943" >}}
+        {{< linkbutton title="CVE" icon="fas fa-bug" url="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3027.html" classes="buttonoutline buttonsmall" aria_label="CVE-2025-29943" >}}
     </div>
 </div>
